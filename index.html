@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <p>Dr JOSE RAMON MEDINA OCHOA</p>
+    <p>GINECOLOGIA OBSTETICIA ECOGRAFIA</p>
+    <p>M.A.S.A.S 16786 C.M.B 686</p>
+
+    <form id="myForm">
+        <input type="text" id="paciente" placeholder="Paciente" required></input>
+        <input type="number" id="edad" placeholder="Edad" required></input>
+        <input type="number" id="gestas" placeholder="Gestas" required></input>
+        <input type="number" id="paras" placeholder="Paras" required></input>
+        <input type="number" id="abortos" placeholder="Abortos" required></input>
+        <input type="text" id="otros" placeholder="Otros"></input>
+        <input type="text" id="peso" placeholder="Peso">
+        <input type="text" id="t/a" placeholder="T/A">
+        <br>
+        <p>F.U.R <input type="date" id="fur" placeholder="F.U.R" required></p>
+        <p>F.U.P <input type="date" id="fup" placeholder="F.U.P" required></p>
+        <br>
+
+        <h2>ECOGRAFIA PELVICA</h2>
+        <p>VEJIGA <input type="text" id="vejiga" class="inputs" required></p>
+        <p>UTERO <input type="text" id="utero" class="inputs" required></p>
+        <p>ANEXOS <input type="text" id="anexos" class="inputs" required></p>
+        <p>OTROS <input type="text" id="otrosEcografia" class="inputs"></p>
+
+        <br>
+
+        <h2>ECOGRAFIA MAMARIA</h2>
+        <textarea id="ecografiaMamaria" rows="7"></textarea>
+
+
+
+        <h2>COLPOSCOPIA</h2>
+        <p>CERVIX <input type="text" id="cervix" class="inputs"></p>
+        <p>LUGOL <input type="text" id="lugol" class="inputs"></p>
+        <p>SECRECION VAGINAL <input type="text" id="secrecion" class="inputs"></p>
+
+        <br>
+
+        <p>CITOLOGIA <input type="date" id="citologia" class="inputs"></p>
+
+
+        <br>
+
+        <h2>TTO / CONCLUSIONES / OBSERVACIONES</h2>
+        <textarea id="conclusiones" rows="7"></textarea>
+        <div class="boton">
+            <br>
+            <input type="reset" value="Vaciar Datos">
+            <button class="generar_pdf" type="button" onclick="generarPDF()">Generar PDF</button>
+            <br>
+            <br>
+        </div>
+    </form>
+    
+</body>
+</html>
